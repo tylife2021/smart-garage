@@ -37,6 +37,9 @@ dependencies:
   # Network info
   connectivity_plus: ^6.1.0
 
+  # Bluetooth BLE
+  flutter_blue_plus: ^1.32.12
+
   # Icons
   cupertino_icons: ^1.0.8
 
