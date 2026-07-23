@@ -6,7 +6,7 @@ import 'package:esp32_smart_controller/services/rest_device_service.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final deviceServiceProvider = Provider<DeviceCommService>((ref) {
-  return RestDeviceService(baseUrl: 'http://192.168.1.50');
+  return RestDeviceService(baseUrl: 'http://192.168.0.126');
 });
 
 final deviceStatusProvider = StateNotifierProvider<DeviceStatusController, DeviceStatus>((ref) {
@@ -65,7 +65,7 @@ class SensorReadingController extends StateNotifier<SensorReading?> {
 }
 
 class DeviceSettingsController extends StateNotifier<DeviceSettings> {
-  DeviceSettingsController() : super(const DeviceSettings(ipAddress: '192.168.1.50', language: 'EN', darkMode: false));
+  DeviceSettingsController() : super(const DeviceSettings(ipAddress: '192.168.0.126', language: 'EN', darkMode: false));
 
   void updateIp(String ipAddress) {
     state = DeviceSettings(ipAddress: ipAddress, language: state.language, darkMode: state.darkMode);
